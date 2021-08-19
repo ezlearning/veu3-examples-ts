@@ -1,0 +1,23 @@
+@import "element-plus/lib/theme-chalk/index.css";
+@import "./reset";
+@import "./utils";
+@import "./component-design.css";
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  // overflow: hidden;
+  height: 100%;
+}
+
+[v-cloak] {
+  display: none;
+}

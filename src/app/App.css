@@ -1,0 +1,10 @@
+.app-container {
+  display: grid;
+  grid-template-columns: 20fr 80fr;
+  grid-template-rows: auto 1fr;
+}
+
+.app-side,
+.app-main {
+  overflow: auto;
+}

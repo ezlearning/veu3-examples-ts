@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vuex@next"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      th {
+        font-weight: bold;
+        color: #46b8a1;
+      }
+
+      th,
+      td {
+        padding: 5px;
+        padding-right: 32px;
+        text-align: left;
+      }
+
+      .menu-row {
+        border-top: 1px solid lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/x-template" id="app-template">
+      <table>
+          <template v-for="(m, index) in menus">
+            <tr :class="index > 0 && m.menu ? 'menu-row' : ''">
+              <th>{{ m.menu }}</th>
+              <td v-for="item in m.items" :key="item">
+                {{ item }}
+              </td>
+            </tr>
+          </template>
+      </table>
+    </script>
+    <script type="text/babel">
+      const { Vue } = window;
+
+      // @ts-check
+      const menus = [
+        { menu: "流程开发", items: ["业务对象设计", "流程图", "表单页面", "接口管理"] },
+        { menu: "流程方案配置", items: [] },
+        {
+          menu: "流程运行管理",
+          items: ["发起流程", "待办事项", "草稿箱", "我的已办", "我的申请", "流程代理", "抄送事项"],
+        },
+        { menu: "流程监控", items: ["流程实例监控", "任务实例监控"] },
+      ];
+
+      /** @type {typeof menus} */
+      const normalizedMenus = [];
+      menus.forEach((m) => {
+        let newMenu = { menu: m.menu, items: [] };
+        normalizedMenus.push(newMenu);
+        m.items.forEach((item, index) => {
+          if (index > 0 && index % 3 === 0) {
+            newMenu = { menu: "", items: [] };
+            normalizedMenus.push(newMenu);
+          }
+          newMenu.items.push(item);
+        });
+      });
+
+      const App = Vue.defineComponent({
+        name: "App",
+        template: "#app-template",
+        setup() {
+          return {
+            menus: normalizedMenus,
+          };
+        },
+      });
+
+      const app = Vue.createApp(App);
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

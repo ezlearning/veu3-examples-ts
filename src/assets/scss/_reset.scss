@@ -1,0 +1,8 @@
+// 修复ElementUi处理z-index错误问题
+.el-popper {
+  z-index: 2000000001 !important;
+}
+
+.el-message-box__wrapper {
+  z-index: 2000000002 !important;
+}

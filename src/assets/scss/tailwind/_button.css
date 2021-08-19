@@ -1,0 +1,59 @@
+@layer components {
+  .btn {
+    @apply inline-flex
+         items-center
+         px-3
+         py-1
+         rounded-lg
+         hover:-translate-y-px
+         focus:outline-none
+         transform
+         transition
+         uppercase
+         tracking-wider
+         font-semibold
+         text-sm
+         sm:text-base
+         shadow-lg;
+  }
+
+  .btn-primary {
+    @apply text-white
+         bg-brand-500
+         hover:bg-brand-400
+         active:bg-brand-600;
+  }
+
+  .btn-blue {
+    @apply text-white
+         bg-blue-500
+         hover:bg-blue-400
+         active:bg-blue-600;
+  }
+
+  .btn-red {
+    @apply text-white
+         bg-red-700
+         hover:bg-red-400
+         active:bg-blue-700;
+  }
+
+  .btn-grey {
+    @apply text-gray-900
+         bg-gray-200
+         hover:bg-gray-200;
+  }
+
+  .btn-secondary {
+    @apply text-gray-900
+         bg-gray-300
+         hover:bg-gray-200;
+  }
+
+  .btn > svg {
+    height: 1rem;
+    width: 1rem;
+    fill: currentColor;
+    margin-right: 0.5rem;
+  }
+}

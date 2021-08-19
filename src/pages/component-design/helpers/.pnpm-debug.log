@@ -1,0 +1,792 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "version": "0.0.0",
+      "scripts": {
+        "g": "node build/generate.js",
+        "dev": "vite",
+        "build": "vue-tsc  --noEmit && vite build",
+        "serve": "vite preview",
+        "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --fix src",
+        "routes": "node build/routes.js"
+      },
+      "dependencies": {
+        "@types/jquery": "^3.5.6",
+        "@types/lodash-es": "^4.17.4",
+        "@types/select2": "^4.0.54",
+        "dynamics.js": "^1.1.5",
+        "element-plus": "^1.0.2-beta.55",
+        "element-resize-detector": "^1.2.3",
+        "jquery": "^3.6.0",
+        "lodash-es": "^4.17.21",
+        "marked": "^2.1.3",
+        "pikaday": "^1.8.2",
+        "pinia": "^2.0.0-beta.5",
+        "select2": "^4.1.0-rc.0",
+        "vue": "^3.2.0-beta.5",
+        "vue-router": "4"
+      },
+      "devDependencies": {
+        "@rollup/plugin-inject": "^4.0.2",
+        "@types/marked": "^2.0.4",
+        "@types/node": "^16.6.1",
+        "@types/pikaday": "^1.7.5",
+        "@typescript-eslint/eslint-plugin": "^4.28.3",
+        "@typescript-eslint/parser": "^4.28.3",
+        "@vitejs/plugin-vue": "^1.2.5",
+        "@vitejs/plugin-vue-jsx": "^1.1.6",
+        "@vue/babel-plugin-jsx": "^1.0.6",
+        "@vue/compiler-sfc": "^3.0.5",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/eslint-config-typescript": "^7.0.0",
+        "autoprefixer": "^10.3.1",
+        "eslint": "^7.30.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-vue": "^7.13.0",
+        "postcss": "^8.3.6",
+        "prettier": "^2.3.2",
+        "rollup-plugin-visualizer": "^5.5.2",
+        "sass": "^1.35.2",
+        "tailwindcss": "^2.2.6",
+        "typescript": "^4.3.5",
+        "vite": "^2.4.2",
+        "vite-plugin-eslint": "^1.3.0",
+        "vue-tsc": "^0.0.24"
+      }
+    },
+    "prefix": "/Users/sunshine/Study/vue3-examples"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "/Users/sunshine/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/sunshine/Study/vue3-examples/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/sunshine/Study/vue3-examples",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@rollup/plugin-inject/4.0.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@rollup/plugin-inject",
+      "rawSpec": "^4.0.2"
+    }
+  },
+  "5 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/marked/2.0.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/marked",
+      "rawSpec": "^2.0.4"
+    }
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/node/16.6.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/node",
+      "rawSpec": "^16.6.1"
+    }
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/pikaday/1.7.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/pikaday",
+      "rawSpec": "^1.7.5"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@typescript-eslint/eslint-plugin/4.29.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@typescript-eslint/eslint-plugin",
+      "rawSpec": "^4.28.3"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@typescript-eslint/parser/4.29.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@typescript-eslint/parser",
+      "rawSpec": "^4.28.3"
+    }
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vitejs/plugin-vue/1.4.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vitejs/plugin-vue",
+      "rawSpec": "^1.2.5"
+    }
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vitejs/plugin-vue-jsx/1.1.7",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vitejs/plugin-vue-jsx",
+      "rawSpec": "^1.1.6"
+    }
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/babel-plugin-jsx/1.0.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/babel-plugin-jsx",
+      "rawSpec": "^1.0.6"
+    }
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/compiler-sfc/3.2.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/compiler-sfc",
+      "rawSpec": "^3.0.5"
+    }
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/eslint-config-prettier/6.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/eslint-config-prettier",
+      "rawSpec": "^6.0.0"
+    }
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/eslint-config-typescript/7.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/eslint-config-typescript",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/autoprefixer/10.3.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "autoprefixer",
+      "rawSpec": "^10.3.1"
+    }
+  },
+  "17 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint/7.32.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint",
+      "rawSpec": "^7.30.0"
+    }
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-prettier/3.4.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-plugin-prettier",
+      "rawSpec": "^3.4.0"
+    }
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-vue/7.16.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-plugin-vue",
+      "rawSpec": "^7.13.0"
+    }
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss/8.3.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "postcss",
+      "rawSpec": "^8.3.6"
+    }
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prettier/2.3.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "prettier",
+      "rawSpec": "^2.3.2"
+    }
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-visualizer/5.5.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "rollup-plugin-visualizer",
+      "rawSpec": "^5.5.2"
+    }
+  },
+  "23 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/sass/1.37.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "sass",
+      "rawSpec": "^1.35.2"
+    }
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tailwindcss/2.2.7",
+    "wanted": {
+      "dependentId": ".",
+      "name": "tailwindcss",
+      "rawSpec": "^2.2.6"
+    }
+  },
+  "25 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typescript/4.3.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "typescript",
+      "rawSpec": "^4.3.5"
+    }
+  },
+  "26 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vite/2.4.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vite",
+      "rawSpec": "^2.4.2"
+    }
+  },
+  "27 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vite-plugin-eslint/1.3.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vite-plugin-eslint",
+      "rawSpec": "^1.3.0"
+    }
+  },
+  "28 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue-tsc/0.0.24",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue-tsc",
+      "rawSpec": "^0.0.24"
+    }
+  },
+  "29 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/jquery/3.5.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/jquery",
+      "rawSpec": "^3.5.6"
+    }
+  },
+  "30 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/lodash-es/4.17.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/lodash-es",
+      "rawSpec": "^4.17.4"
+    }
+  },
+  "31 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/select2/4.0.54",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/select2",
+      "rawSpec": "^4.0.54"
+    }
+  },
+  "32 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/dynamics.js/1.1.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "dynamics.js",
+      "rawSpec": "^1.1.5"
+    }
+  },
+  "33 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/element-plus/1.0.2-beta.70",
+    "wanted": {
+      "dependentId": ".",
+      "name": "element-plus",
+      "rawSpec": "^1.0.2-beta.55"
+    }
+  },
+  "34 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/element-resize-detector/1.2.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "element-resize-detector",
+      "rawSpec": "^1.2.3"
+    }
+  },
+  "35 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/jquery/3.6.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "jquery",
+      "rawSpec": "^3.6.0"
+    }
+  },
+  "36 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lodash-es/4.17.21",
+    "wanted": {
+      "dependentId": ".",
+      "name": "lodash-es",
+      "rawSpec": "^4.17.21"
+    }
+  },
+  "37 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/marked/2.1.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "marked",
+      "rawSpec": "^2.1.3"
+    }
+  },
+  "38 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pikaday/1.8.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "pikaday",
+      "rawSpec": "^1.8.2"
+    }
+  },
+  "39 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pinia/2.0.0-rc.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "pinia",
+      "rawSpec": "^2.0.0-beta.5"
+    }
+  },
+  "40 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/select2/4.1.0-rc.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "select2",
+      "rawSpec": "^4.1.0-rc.0"
+    }
+  },
+  "41 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue/3.2.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue",
+      "rawSpec": "^3.2.0-beta.5"
+    }
+  },
+  "42 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue-router/4.0.11",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue-router",
+      "rawSpec": "4"
+    }
+  },
+  "43 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@rollup/plugin-inject/4.0.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "44 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@rollup/plugin-inject/4.0.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "45 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/node/16.6.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "46 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/node/16.6.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "47 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/marked/2.0.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "48 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/marked/2.0.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "49 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/pikaday/1.7.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "50 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/pikaday/1.7.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "51 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@typescript-eslint/parser/4.29.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "52 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@typescript-eslint/parser/4.29.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "53 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vitejs/plugin-vue/1.4.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "54 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vitejs/plugin-vue/1.4.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "55 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vitejs/plugin-vue-jsx/1.1.7",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "56 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vitejs/plugin-vue-jsx/1.1.7",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "57 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/babel-plugin-jsx/1.0.6",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "58 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/babel-plugin-jsx/1.0.6",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "59 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/compiler-sfc/3.2.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "60 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/compiler-sfc/3.2.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "61 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@typescript-eslint/eslint-plugin/4.29.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "62 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@typescript-eslint/eslint-plugin/4.29.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "63 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/eslint-config-typescript/7.0.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "64 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/eslint-config-typescript/7.0.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "65 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/autoprefixer/10.3.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "66 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/autoprefixer/10.3.1",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "67 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-prettier/3.4.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "68 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-prettier/3.4.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "69 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/eslint-config-prettier/6.0.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "70 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/eslint-config-prettier/6.0.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "71 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-vue/7.16.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "72 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-vue/7.16.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "73 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss/8.3.6",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "74 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss/8.3.6",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "75 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier/2.3.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "76 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier/2.3.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "77 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/7.32.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "78 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/7.32.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "79 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-visualizer/5.5.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "80 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-visualizer/5.5.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "81 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sass/1.37.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "82 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sass/1.37.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "83 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tailwindcss/2.2.7",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "84 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tailwindcss/2.2.7",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "85 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typescript/4.3.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "86 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typescript/4.3.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "87 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vite/2.4.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "88 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vite/2.4.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "89 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vite-plugin-eslint/1.3.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "90 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vite-plugin-eslint/1.3.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "91 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-tsc/0.0.24",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "92 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-tsc/0.0.24",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "93 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/jquery/3.5.6",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "94 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/jquery/3.5.6",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "95 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/lodash-es/4.17.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "96 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/lodash-es/4.17.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "97 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/select2/4.0.54",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "98 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/select2/4.0.54",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "99 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dynamics.js/1.1.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "100 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dynamics.js/1.1.5",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "101 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/element-resize-detector/1.2.3",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "102 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/element-resize-detector/1.2.3",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "103 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jquery/3.6.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "104 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jquery/3.6.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "105 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/marked/2.1.3",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "106 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/marked/2.1.3",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "107 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pikaday/1.8.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "108 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pikaday/1.8.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "109 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lodash-es/4.17.21",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "110 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lodash-es/4.17.21",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "111 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-router/4.0.11",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "112 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-router/4.0.11",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "113 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/select2/4.1.0-rc.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "114 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/select2/4.1.0-rc.0",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "115 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue/3.2.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "116 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue/3.2.2",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "117 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pinia/2.0.0-rc.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "118 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pinia/2.0.0-rc.4",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "119 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/element-plus/1.0.2-beta.70",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "resolved"
+  },
+  "120 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/element-plus/1.0.2-beta.70",
+    "requester": "/Users/sunshine/Study/vue3-examples",
+    "status": "found_in_store"
+  },
+  "121 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "@types/ement-resize-detector is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "request": {
+      "url": "https://registry.npmjs.org/@types%2Fement-resize-detector"
+    },
+    "response": {
+      "size": 0,
+      "timeout": 60000
+    },
+    "pkgName": "@types/ement-resize-detector",
+    "pkgsStack": [],
+    "err": {
+      "name": "Error",
+      "message": "GET https://registry.npmjs.org/@types%2Fement-resize-detector: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "Error: GET https://registry.npmjs.org/@types%2Fement-resize-detector: Not Found - 404\n    at RetryOperation._fn (/Users/sunshine/.nvm/versions/node/v14.16.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.11.0/node_modules/pnpm/dist/pnpm.cjs:79604:18)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+    }
+  }
+}

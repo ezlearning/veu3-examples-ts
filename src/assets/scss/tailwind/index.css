@@ -1,0 +1,5 @@
+/** config: npx tailwindcss init -p */
+/** build:  npx tailwind-cli.build src/assets/scss/tailwind.css public/libs/css/tailwind.min.css  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
